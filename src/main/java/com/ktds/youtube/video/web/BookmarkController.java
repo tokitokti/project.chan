@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping(value = "/bookmark")
 public class BookmarkController {
 
 
-    @RequestMapping(value = "/bookmark")
+    @RequestMapping(value = "/list.do")
     public String list () {
         return "/item/list";
     }

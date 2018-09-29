@@ -6,9 +6,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping(value = "/item")
 public class ItemController {
 
-    @RequestMapping(value = "/item")
+    @RequestMapping(value = "/list.do")
     public String list () {
 
         return "/item/list";

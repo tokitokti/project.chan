@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ktds.youtube.DownloadUtil;
 import com.ktds.youtube.video.service.VideoService;
 import com.ktds.youtube.video.vo.GroupVideoListVO;
 import com.ktds.youtube.video.vo.VideoVO;
@@ -89,16 +88,7 @@ public class VideoController {
 	}
 	@GetMapping("/video/download/{fileName}")
 	public void download(@PathVariable String fileName ,HttpServletRequest request, HttpServletResponse response) {
-		
-		try {
-			new DownloadUtil(this.uploadPath + File.separator +fileName).download(request, response, fileName);
-		} catch (UnsupportedEncodingException e) {
-			throw new RuntimeException(e.getMessage());
-			
-		}
-		
-		
-		
+
 	}
 	@RequestMapping("/video/list")
 	public ModelAndView viewVideoListPage() {

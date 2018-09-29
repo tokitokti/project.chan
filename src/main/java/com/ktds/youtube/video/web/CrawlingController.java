@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping(value = "/crawling")
 public class CrawlingController {
 
 
-    @RequestMapping(value = "/crawling")
+    @RequestMapping(value = "/list.do")
     public String list () {
         return "/item/list";
     }
